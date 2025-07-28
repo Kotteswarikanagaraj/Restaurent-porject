@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+ 
+
+  <title>Menu | Kottaz Dine</title>
+   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+   <div id="header">
+    <nav class="navbar">
+  <div class="logo">Kotta<span class="char">z</span></div>
+
+  <!-- Hamburger Icon -->
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="table.html">Book Table</a></li>
+    <li><a href="order.html">Order</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+<p>Craving something delicious? Come vibe with us at Kottaz — bold flavors.</p>
+</div>
+
+  </header>
+
+  <section class="menu-section">
+    <h2>Our Delicious Menu</h2>
+   
+  </section>
+  <div class="menuItem">
+  <h3>Lemon Juice</h3>
+  
+  <img src="images/Lemon juice.jpg" alt="Lemon Juice" />
+  <p>₹149</p>
+  <button onclick="orderNow('Lemon Juice', 149)">Order Now</button>
+</div>
+<div class="menuItem">
+  <h3>Cheese Pizza</h3>
+  
+  <img src="images/cheese pizza.jpg" alt="Cheese Pizza" />
+  <p>₹249</p>
+  <button onclick="orderNow('Cheese Pizza', 249)">Order Now</button>
+</div>
+<div class="menuItem">
+  <h3>Veg Briyani</h3>
+  
+  <img src="images/veg Briyani.jpg" alt="Veg Briyani" />
+  <p>₹299</p>
+  <button onclick="orderNow('Veg Briyani', 299)">Order Now</button>
+</div>
+<div class="menuItem">
+  <h3>Chocolate cake</h3>
+  
+  <img src="images/chacolate cake.jpg" alt="Chocolate Cake" />
+  <p>₹199</p>
+  <button onclick="orderNow('Chocolate cake', 199)">Order Now</button>
+</div>
+
+
+
+  <footer>
+    <p>&copy; 2025 Kottaz Dine. All rights reserved.</p>
+  </footer>
+
+  <script src="menu.js"></script>
+  <script src="script1.js"></script>
+  <script>
+  function orderNow(name, price) {
+    const order = { name, price };
+
+    // Get existing orders from localStorage
+    const existing = JSON.parse(localStorage.getItem('orders')) || [];
+
+    // Add new item
+    existing.push(order);
+
+    // Save back to localStorage
+    localStorage.setItem('orders', JSON.stringify(existing));
+
+    alert(`${name} added to your order!`);
+  }
+</script>
+
+
+</body>
+</html>

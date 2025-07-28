@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <title>Contact Us | Kottaz Dine</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <div id="header">
+    
+    <nav class="navbar">
+  <div class="logo">Kotta<span class="char">z</span></div>
+
+  <!-- Hamburger Icon -->
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="table.html">Book Table</a></li>
+    <li><a href="order.html">Order</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+<p>Need help or want to place an order?<br>
+Contact Kottaz — we're happy to serve you!</p>
+ </div>
+</header>
+  
+  
+
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+
+    <div class="contact-container">
+      <div class="contact-info">
+        <p><strong>Address:</strong> 123, Main Street, Chennai, Tamil Nadu</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Email:</strong> support@kottazdine.com</p>
+      </div>
+
+      <form id="contactForm" class="contact-form">
+       
+        <label for="cname">Your Name:</label>
+        <input type="text" id="cname" required>
+
+        <label for="cemail">Your Email:</label>
+        <input type="email" id="cemail" required>
+
+        <label for="cmsg">Your Message:</label>
+        <textarea id="cmsg" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <div class="map-container">
+      <iframe 
+        src="https://maps.google.com/maps?q=Chennai&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Kottaz Dine. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("✅ Thank you for contacting us! We'll get back to you shortly.");
+      this.reset();
+    });
+  </script>
+  <script src="contact.js"></script>
+  <script src="script1.js"></script>
+</body>
+</html>

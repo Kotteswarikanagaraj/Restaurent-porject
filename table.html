@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <title>Book a Table | Kottaz Dine</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+   <div id="header">
+  <nav class="navbar">
+  <div class="logo">Kotta<span class="char">z</span></div>
+
+  <!-- Hamburger Icon -->
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="table.html">Book Table</a></li>
+    <li><a href="order.html">Order</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+<p>Experience the taste of tradition with a modern twist. Freshly made, passionately served.</p>
+</div>
+</header>
+    
+
+  <section class="booking-section">
+    <h2>Book Your Table</h2>
+    <form id="bookingForm" class="booking-form">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" required pattern="[0-9]{10}">
+
+      <label for="guests">Number of Guests:</label>
+      <input type="number" id="guests" min="1" max="20" required>
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" required>
+
+      <label for="time">Time:</label>
+      <input type="time" id="time" required>
+
+      <label for="note">Special Request:</label>
+      <textarea id="note" placeholder="Optional"></textarea>
+
+      <button type="submit">Book Table</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Kottaz Dine. All rights reserved.</p>
+  </footer>
+
+  <script src="js/booking.js"></script>
+  <script src="script1.js"></script>
+</body>
+</html>
